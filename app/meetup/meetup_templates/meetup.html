@@ -1,0 +1,94 @@
+{% extends 'components/layout.html' %}
+
+{% block title %} Meetup {% endblock title %}
+
+{% block content %}
+<div class="row mx-auto my-auto">
+    <div class="carousel slide w-100" data-ride="carousel" id="meetupcarousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="../../static/images/meetup.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">HTML meetup</h5>
+                            <p class="card-text">This is meetup for studying HTML</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="../../static/images/meetup.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">CSS meetup</h5>
+                            <p class="card-text">This is meetup for studying CSS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="../../static/images/meetup.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">SQL meetup</h5>
+                            <p class="card-text">This is meetup for studying SQL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="../../static/images/meetup.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Python meetup</h5>
+                            <p class="card-text">This is meetup for studying Python</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="../../static/images/meetup.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Flask meetup</h5>
+                            <p class="card-text">This is meetup for studying Flask</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="../../static/images/meetup.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">JavaScript meetup</h5>
+                            <p class="card-text">This is meetup for studying JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="../../static/images/meetup.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">AWS meetup</h5>
+                            <p class="card-text">This is meetup for studying AWS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="../../static/images/meetup.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">React meetup</h5>
+                            <p class="card-text">This is meetup for studying React</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev w-auto" href="#meetupcarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next w-auto" href="#meetupcarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+        </button>
+    </div>
+</div>
+{% endblock content %}

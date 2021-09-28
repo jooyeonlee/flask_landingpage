@@ -1,0 +1,22 @@
+.custom {
+    padding-top: 10rem;
+    height: calc(100% - 73px);
+}
+
+#loginform {
+    padding-left: 3rem;
+}
+
+#readbutton {
+    color: white;
+    background-color: gray;
+    border-color: lightgray;
+}
+
+#leclist {
+    margin-top: 5rem;
+}
+
+#meetupcarousel {
+    margin-top: 5rem;
+}
