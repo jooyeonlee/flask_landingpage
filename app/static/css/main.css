@@ -15,8 +15,14 @@
 
 #leclist {
     margin-top: 5rem;
+    margin-bottom: 10rem;
 }
 
 #meetupcarousel {
     margin-top: 5rem;
 }
+
+fieldset {
+    margin-top:1rem;
+    padding:0px;
+ }

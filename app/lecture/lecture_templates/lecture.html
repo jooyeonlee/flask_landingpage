@@ -11,7 +11,7 @@
                     <img class="mr-4 align-self-start" src="../../static/images/html.jpg" alt="Generic placeholder image" width="150px">
                     <div class="media-body align-self-start">
                         <h5 class="mt-0 font-weight-bold">HTML</h5>
-                        <h6 class="mt-3 font-weight-normal">April 6, 2020 - March 12 2021</h6>
+                        <h6 class="mt-3 font-weight-normal">2020-06-09 - 2021-03-30</h6>
                         <h6 class="mt-3 font-weight-normal">Study HTML</h6>
                         <h6 class="mt-3 font-weight-normal">$20</h6>
                     </div>
@@ -23,7 +23,7 @@
                     <img class="mr-4 align-self-start" src="../../static/images/css.jpg" alt="Generic placeholder image" width="150px">
                     <div class="media-body align-self-start">
                         <h5 class="mt-0 font-weight-bold">CSS</h5>
-                        <h6 class="mt-3 font-weight-normal">April 6, 2020 - March 12 2021</h6>
+                        <h6 class="mt-3 font-weight-normal">2020-06-09 - 2021-03-30</h6>
                         <h6 class="mt-3 font-weight-normal">Study CSS</h6>
                         <h6 class="mt-3 font-weight-normal">$20</h6>
                     </div>
@@ -35,7 +35,7 @@
                     <img class="mr-4 align-self-start" src="../../static/images/sql.jpeg" alt="Generic placeholder image" width="150px">
                     <div class="media-body align-self-start">
                         <h5 class="mt-0 font-weight-bold">PostgreSQL</h5>
-                        <h6 class="mt-3 font-weight-normal">April 6, 2020 - March 12 2021</h6>
+                        <h6 class="mt-3 font-weight-normal">2020-06-09 - 2021-03-30</h6>
                         <h6 class="mt-3 font-weight-normal">Study SQL</h6>
                         <h6 class="mt-3 font-weight-normal">$20</h6>
                     </div>
@@ -47,14 +47,31 @@
                     <img class="mr-4 align-self-start" src="../../static/images/python.jpg" alt="Generic placeholder image" width="150px">
                     <div class="media-body align-self-start">
                         <h5 class="mt-0 font-weight-bold">Python</h5>
-                        <h6 class="mt-3 font-weight-normal">April 6, 2020 - March 12 2021</h6>
+                        <h6 class="mt-3 font-weight-normal">2020-06-09 - 2021-03-30</h6>
                         <h6 class="mt-3 font-weight-normal">Study Python</h6>
                         <h6 class="mt-3 font-weight-normal">$20</h6>
                     </div>
                     <button class="btn btn-md btn-default ml-1" type=button id="readbutton">More Info</button>
                 </div>
             </li>
+            {% if lecture_new is not none %}
+                <li class="list-group-item">
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <img class="mr-4 align-self-start" src="../../static/images/next-lesson.jpg" alt="Generic placeholder image" width="150px">
+                        <div class="media-body align-self-start">
+                            <h5 class="mt-0 font-weight-bold">{{lecture_new['subject']}}</h5>
+                            <h6 class="mt-3 font-weight-normal">{{lecture_new['startdate'].strftime('%Y-%m-%d')}} - {{lecture_new['enddate'].strftime('%Y-%m-%d')}}</h6>
+                            <h6 class="mt-3 font-weight-normal">{{lecture_new['description']}}</h6>
+                            <h6 class="mt-3 font-weight-normal">${{lecture_new['price']}}</h6>
+                        </div>
+                        <button class="btn btn-md btn-default ml-1" type=button id="readbutton">More Info</button>
+                    </div>
+                </li>
+            {% endif %}
         </ul>
+        <div class="d-flex text-center text-lg-start mt-4 pt-2">
+            <a href="{{url_for('lecture.addlecture')}}"><button type="button" class="btn btn-secondary btn-lg" style="padding-left: 2.0rem; padding-right: 2.0rem;">Add New Lecture</button></a>
+        </div>
     </div>
 </div>
 {% endblock content %}
