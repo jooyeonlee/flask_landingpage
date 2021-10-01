@@ -28,6 +28,17 @@
                     <li class="nav-item">
                         <a class="nav-item nav-link" href="{{url_for('meetup.meetuplist')}}">Meetups</a>
                     </li>
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{current_user.username}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="{{url_for('user.profile')}}">Profile</a>
+                          <a class="dropdown-item" href="{{url_for('user.signout')}}">Sign Out</a>
+                        </div>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>

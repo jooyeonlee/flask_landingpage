@@ -1,12 +1,13 @@
 from app.forms import newLectureForm
-from flask import Blueprint, render_template, request, url_for, flash
+from flask import Blueprint, render_template, request, url_for, flash, redirect
 from app.models import db, Lesson
 
 lectures = Blueprint('lecture', __name__, template_folder='lecture_templates')
 
 @lectures.route('/lecture', methods=["GET"])
 def lecturelist():
-    return render_template('lecture.html', lecture_new=None)
+    lecturelist = [lec.to_dict() for lec in Lesson.query.all()]
+    return render_template('lecture.html', lecturelist=lecturelist)
 
 @lectures.route('/addlecture', methods=["GET", "POST"])
 def addlecture():
@@ -18,5 +19,5 @@ def addlecture():
             db.session.commit()
         else:
             print('fail')
-        return render_template('lecture.html', lecture_new=newlecture.to_dict())
+        return redirect(url_for('lecture.lecturelist'))
     return render_template('addlecture.html', form=form)

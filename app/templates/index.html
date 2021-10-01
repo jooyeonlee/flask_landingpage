@@ -9,22 +9,9 @@
                 <img src="../static/images/study1.png" class="img-fluid" alt="Study Image">
             </div>
             <div class="col-md-8 col-lg-6 col-xl-4" id="loginform">
-                <form>
-                    <h5>Join Study Code and improve your coding skils</h5>
-                    <br>
-                    <div class="form-outline mb-4">
-                        <input type="email" id="emailform" class="form-control form-control-lg" placeholder="Enter email address"/>
-                        <label class="form-label" for="emailform">Email Address</label>
-                    </div>
-                    <div class="form-outline mb-3">
-                        <input type="password" id="passform" class="form-control form-control-lg" placeholder="Enter password"/>
-                        <label class="form-label" for="passform">Password</label>
-                    </div>
-                    <div class="d-flex text-center text-lg-start mt-4 pt-2 justify-content-center">
-                        <button type="button" class="btn btn-secondary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem; margin-right: 3rem;">Login</button>
-                        <a href="{{url_for('user.signup')}}"><button type="button" class="btn btn-secondary btn-lg" style="padding-left: 2.0rem; padding-right: 2.0rem;">Sign-up</button></a>
-                    </div>
-                </form>
+                {% if current_user.is_authenticated %}
+                <h1>Hello, {{current_user.username}}!</h1>
+                {% endif %}
             </div>
         </div>
     </div>
